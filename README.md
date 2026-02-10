@@ -1,37 +1,5 @@
-# Drone Data Transmission Tester
 
-## Repository Overview
-This repository provides a **Drone Data Transmission Tester**  
-that simulates drone connection, telemetry, and event data
-to verify the server’s API behavior.
----
-
-## How It Works
-
-| Step | API Endpoint             | Description | Purpose | etc.      |
-|------|--------------------------|-------------|---------|-----------|
-| 1 | `/auth/connect`          | Sends drone serial and device name. Receives authentication token if approved. | Establish a valid session between drone and server |
-| 2 | `/api/telemetry`| Sends normal telemetry data (angle, position) with token. | Transmit periodic drone status information | (event=0) |
-| 3 | `/api/telemetry` | Sends telemetry with event flag and event details (e.g., human detected). | Report important detection events | (event=1) |
-| 4 | `/auth/update`           | Sends current token and receives a refreshed token. | Maintain a valid authenticated session |
-| 5 | `/auth/disconnect`       | Sends disconnect request with token. | Cleanly close the connection |
-
----
-
-## Installation
-Install the required dependencies:
-```bash
-pip install -r requirements.txt
-```
----
-## Usage
-Run the application:
-```bash
-python3 main.py
-```
----
-
-# Part of: Manufacturer-Independent Drone Platform
+# Manufacturer-Independent Drone Platform
 
 The project aims to be a **manufacturer-independent drone platform**, connecting various drone devices with standardized interfaces and performing **Redis-based authentication and status management**.
 
@@ -114,3 +82,36 @@ By securing this critical **golden time**, the system enables faster decision-ma
 |:---------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------:|
 | <img src="https://github.com/user-attachments/assets/456dc993-64a0-4ac8-9138-0f5446aaad07" width="450"/>  | <img src="https://github.com/user-attachments/assets/592adb6b-9066-47ac-8f9d-d5117492a6af" width="450"/>  |
 |                          **Validation of Redis tokens for incoming drone data.**                          |                              **Periodic drone connection state monitoring.**                              |
+
+# Drone Data Transmission Tester
+
+## Repository Overview
+This repository provides a **Drone Data Transmission Tester**  
+that simulates drone connection, telemetry, and event data
+to verify the server’s API behavior.
+---
+
+## How It Works
+
+| Step | API Endpoint             | Description | Purpose | etc.      |
+|------|--------------------------|-------------|---------|-----------|
+| 1 | `/auth/connect`          | Sends drone serial and device name. Receives authentication token if approved. | Establish a valid session between drone and server |
+| 2 | `/api/telemetry`| Sends normal telemetry data (angle, position) with token. | Transmit periodic drone status information | (event=0) |
+| 3 | `/api/telemetry` | Sends telemetry with event flag and event details (e.g., human detected). | Report important detection events | (event=1) |
+| 4 | `/auth/update`           | Sends current token and receives a refreshed token. | Maintain a valid authenticated session |
+| 5 | `/auth/disconnect`       | Sends disconnect request with token. | Cleanly close the connection |
+
+---
+
+## Installation
+Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
+---
+## Usage
+Run the application:
+```bash
+python3 main.py
+```
+---
