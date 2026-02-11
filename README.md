@@ -32,7 +32,7 @@ python3 main.py
 ```
 ---
 
----
+<img width="5838" height="4039" alt="Untitled diagram-2026-02-11-182634" src="https://github.com/user-attachments/assets/6988927f-025d-4f7d-93e2-55427dcef741" />---
 # PROJECT OVERVIEW
 # Manufacturer-Independent Drone Platform
 ---
@@ -101,7 +101,8 @@ By securing this critical **golden time**, the system enables faster decision-ma
 ## System Architecture
 
 ### Overall System Architecture
-<img src="https://github.com/user-attachments/assets/2693c67c-8110-4f79-86f5-22768663c5ae" width="900"/>
+<img height="900" alt="Untitled diagram-2026-02-11-182634" src="https://github.com/user-attachments/assets/8842dd09-471e-4a75-8804-674f9cff675a" />
+
 
 ---
 
