@@ -38,6 +38,11 @@ python3 main.py
 # PROJECT OVERVIEW
 # Manufacturer-Independent Drone Platform
 ---
+
+### [KOREAN GUIDE](https://github.com/seyun4047/drone-platform-docs/blob/main/components/platform/overview.kr.md)
+
+---
+
 It is a **manufacturer-independent integrated drone monitoring platform!**
 
 It is designed to manage various drones within a single environment,
