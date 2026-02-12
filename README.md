@@ -2,10 +2,6 @@ Korean version: [한국어 문서](https://github.com/seyun4047/drone-platform-t
 
 ---
 
-Korean version: [한국어 문서](https://github.com/seyun4047/drone-platform-docs/blob/main/components/trans-tester/trans-tester.kr.md)
-
----
-
 # Drone Data Transmission Tester
 
 ---
