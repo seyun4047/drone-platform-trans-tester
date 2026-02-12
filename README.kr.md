@@ -1,5 +1,5 @@
 
-해당문서는 gemini-2.5-flash-lite 로 번역되어 부자연스러운 부분이 있을 수 있으니,<br>정확한 내용을 여기서 확인해주세요.<br>원본보기: [ENGLISH GUIDE](https://github.com/seyun4047/drone-platform-docs/blob/main/components/trans-tester/trans-tester.md)
+해당 문서는 gemini-2.5-flash-lite 로 자동 번역되어 부자연스러운 부분이 있을 수 있으니,<br>정확한 내용을 여기서 확인해주세요. : [영어 문서](https://github.com/seyun4047/drone-platform-docs/blob/main/components/trans-tester/trans-tester.md)
 
 ---
 
@@ -48,7 +48,7 @@ python3 main.py
 # Manufacturer-Independent Drone Platform
 
 ---
-It is a **manufacturer-independent integrated drone monitoring platform!**
+It is a **manufacturer-independent integrated drone monitoring platform.**
 
 It is designed to manage various drones within a single environment,
 enabling both **high-end professional drones and commercially available hobby camera drones**
