@@ -26,10 +26,12 @@ def connect():
         )
         result = res.json()
 
-        TOKEN = result["token"]
         if not result["status"]:
             print("Connection failed:", result)
             return
+
+        TOKEN = result["token"]
+
 
         CONNECTED = True
         print("Connected successfully")
