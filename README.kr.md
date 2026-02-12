@@ -2,44 +2,37 @@
 
 ---
 
-Korean version: [한국어 문서](https://github.com/seyun4047/drone-platform-docs/blob/main/components/trans-tester/trans-tester.kr.md)
+# 드론 데이터 전송 테스터
 
 ---
-
-# Drone Data Transmission Tester
-
----
-## Repository Overview
-This repository provides a **Drone Data Transmission Tester**  
-that simulates drone connection, telemetry, and event data
-to verify the server’s API behavior.
+## 저장소 개요
+이 저장소는 드론 연결, 텔레메트리, 이벤트 데이터를 시뮬레이션하여 서버의 API 동작을 검증하는 **드론 데이터 전송 테스터**를 제공합니다.
 ---
 
-## How It Works
+## 작동 방식
 
-| Step | API Endpoint             | Description | Purpose | etc.      |
+| 단계 | API 엔드포인트             | 설명 | 목적 | 비고      |
 |------|--------------------------|-------------|---------|-----------|
-| 1 | `/auth/connect`          | Sends drone serial and device name. Receives authentication token if approved. | Establish a valid session between drone and server |
-| 2 | `/api/telemetry`| Sends normal telemetry data (angle, position) with token. | Transmit periodic drone status information | (event=0) |
-| 3 | `/api/telemetry` | Sends telemetry with event flag and event details (e.g., human detected). | Report important detection events | (event=1) |
-| 4 | `/auth/update`           | Sends current token and receives a refreshed token. | Maintain a valid authenticated session |
-| 5 | `/auth/disconnect`       | Sends disconnect request with token. | Cleanly close the connection |
+| 1 | `/auth/connect`          | 드론 시리얼 및 장치 이름을 전송합니다. 승인되면 인증 토큰을 받습니다. | 드론과 서버 간 유효한 세션 설정 | |
+| 2 | `/api/telemetry`| 토큰과 함께 일반 텔레메트리 데이터(각도, 위치)를 전송합니다. | 주기적인 드론 상태 정보 전송 | (event=0) |
+| 3 | `/api/telemetry` | 이벤트 플래그 및 이벤트 상세 정보(예: 사람 감지됨)와 함께 텔레메트리를 전송합니다. | 중요한 감지 이벤트 보고 | (event=1) |
+| 4 | `/auth/update`           | 현재 토큰을 전송하고 갱신된 토큰을 받습니다. | 유효한 인증된 세션 유지 | |
+| 5 | `/auth/disconnect`       | 토큰과 함께 연결 해제 요청을 전송합니다. | 연결을 깔끔하게 종료 | |
 
 ---
 
-## Installation
-Install the required dependencies:
+## 설치
+필요한 종속성을 설치하십시오:
 ```bash
 pip install -r requirements.txt
 ```
 ---
-## Usage
-Run the application:
+## 사용법
+애플리케이션을 실행하십시오:
 ```bash
 python3 main.py
 ```
 ---
-
 
 ---
 
