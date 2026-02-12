@@ -1,6 +1,11 @@
 
+Korean version: [한국어 문서](https://github.com/seyun4047/drone-platform-docs/blob/main/components/trans-tester/trans-tester.kr.md)
+
+---
+
 # Drone Data Transmission Tester
 
+---
 ## Repository Overview
 This repository provides a **Drone Data Transmission Tester**  
 that simulates drone connection, telemetry, and event data
@@ -37,12 +42,8 @@ python3 main.py
 
 # PROJECT OVERVIEW
 # Manufacturer-Independent Drone Platform
----
-
-### [KOREAN GUIDE](https://github.com/seyun4047/drone-platform-docs/blob/main/components/platform/overview.kr.md)
 
 ---
-
 It is a **manufacturer-independent integrated drone monitoring platform!**
 
 It is designed to manage various drones within a single environment,
