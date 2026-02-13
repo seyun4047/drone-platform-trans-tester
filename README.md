@@ -108,7 +108,7 @@ By securing this critical **golden time**, the system enables faster decision-ma
 ## System Architecture
 
 ### Overall System Architecture
-<img height="900" alt="AWS Upload Presigned URL-2026-02-13-154944" src="https://github.com/user-attachments/assets/b3c05ffd-6a25-47c2-9473-83fec588129b" />
+<img height="900" alt="AWS Upload Presigned URL-2026-02-13-170224" src="https://github.com/user-attachments/assets/a2cb756b-b30d-49a5-a503-64afa2519ad0" />
 
 
 ---
