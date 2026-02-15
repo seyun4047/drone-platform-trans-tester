@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ## Usage
 Run the application:
 ```bash
-python3 main.py
+python3 tester.py
 ```
 ---
 
@@ -61,6 +61,8 @@ This platform consists of multiple independent repositories:
 | Monitoring Server | Real-time Drone health check monitoring service   | [GitHub](https://github.com/seyun4047/drone-platform-monitoring-server) |
 | Drone Data Tester | Test client for drone telemetry & data simulation | [GitHub](https://github.com/seyun4047/drone-platform-trans-tester)       |
 | Drone Client | Drone Data Collection, Transmission & Analysis | [GitHub](https://github.com/seyun4047/drone-platform-client)            |
+[GitHub](https://github.com/seyun4047/drone-platform-trans-tester)       |
+| Dashboard | Drone platform's front-end | [GitHub](https://github.com/seyun4047/drone-platform-dashboard)            |
 | Docs | Platform Documents, API's | [GitHub](https://github.com/seyun4047/drone-platform-docs)|
 
 ---
