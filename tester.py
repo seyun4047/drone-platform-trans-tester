@@ -292,54 +292,39 @@ def auto_send():
 # =====================================================
 while True:
     print("\n----------------------------")
-    print("1. Connect one")
-    print("2. Connect multiple")
-    print("3. Update one")
-    print("4. Update multiple")
-    print("5. Disconnect one")
-    print("6. Disconnect multiple")
-    print("7. Send telemetry (one)")
-    print("8. Send event (one)")
-    print("9. Auto simulate (3:1)")
+    print("1. Connect multiple")
+    print("2. Update multiple")
+    print("3. Disconnect multiple")
+    print("4. Send telemetry")
+    print("5. Send event")
+    print("6. Auto simulate")
     print("----------------------------")
 
     cmd = input("Select > ").strip()
 
-    if cmd == "1":
-        s = input("Serial > ").strip()
-        if s in DRONES:
-            connect(s)
 
-    elif cmd == "2":
+    if cmd == "1":
         connect_multiple()
 
-    elif cmd == "3":
-        s = input("Serial > ").strip()
-        if s in DRONES:
-            update_token(s)
 
-    elif cmd == "4":
+    elif cmd == "2":
         update_multiple()
 
-    elif cmd == "5":
-        s = input("Serial > ").strip()
-        if s in DRONES:
-            disconnect(s)
 
-    elif cmd == "6":
+    elif cmd == "3":
         disconnect_multiple()
 
-    elif cmd == "7":
+    elif cmd == "4":
         s = input("Serial > ").strip()
         if s in DRONES:
             send_telemetry(s)
 
-    elif cmd == "8":
+    elif cmd == "5":
         s = input("Serial > ").strip()
         if s in DRONES:
             send_event(s)
 
-    elif cmd == "9":
+    elif cmd == "6":
         auto_send()
 
     else:
