@@ -61,7 +61,7 @@ This platform consists of multiple independent repositories:
 | Monitoring Server | Real-time Drone health check monitoring service   | [GitHub](https://github.com/seyun4047/drone-platform-monitoring-server) |
 | Drone Data Tester | Test client for drone telemetry & data simulation | [GitHub](https://github.com/seyun4047/drone-platform-trans-tester)       |
 | Drone Client | Drone Data Collection, Transmission & Analysis | [GitHub](https://github.com/seyun4047/drone-platform-client)            |
-| Docs | Platform Documents | [GitHub](https://github.com/seyun4047/drone-platform-docs)|
+| Docs | Platform Documents, API's | [GitHub](https://github.com/seyun4047/drone-platform-docs)|
 
 ---
 
@@ -108,7 +108,7 @@ By securing this critical **golden time**, the system enables faster decision-ma
 ## System Architecture
 
 ### Overall System Architecture
-<img height="900" alt="Untitled diagram-2026-02-11-182634" src="https://github.com/user-attachments/assets/8842dd09-471e-4a75-8804-674f9cff675a" />
+<img height="900" alt="AWS Upload Presigned URL-2026-02-13-170224" src="https://github.com/user-attachments/assets/a2cb756b-b30d-49a5-a503-64afa2519ad0" />
 
 
 ---
@@ -125,3 +125,8 @@ By securing this critical **golden time**, the system enables faster decision-ma
 |:---------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------:|
 | <img src="https://github.com/user-attachments/assets/456dc993-64a0-4ac8-9138-0f5446aaad07" width="450"/>  |<img width="450" alt="Untitled diagram-2026-02-11-173920" src="https://github.com/user-attachments/assets/6eea1ba2-663d-4bf1-be1d-c729e3bda2f7" />|
 |                          **Validation of Redis tokens for incoming drone data.**                          |                              **Periodic drone connection state monitoring.**                             |
+
+| Back-End <-> Front-End |
+|:---:|
+| <img height="700" alt="AWS Upload Presigned URL-2026-02-13-144904" src="https://github.com/user-attachments/assets/4e956658-5ef2-4c1d-972d-ea669aa09b67" /> |
+| **Communication between Back-End Server and Front-End Dashboard** |
