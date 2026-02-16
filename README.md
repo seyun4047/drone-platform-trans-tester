@@ -43,11 +43,17 @@ python3 tester.py
 # Manufacturer-Independent Drone Platform
 
 ---
-It is a **manufacturer-independent integrated drone monitoring platform.**
+It is a **Manufacturer-Independent Drone Monitoring Platform.**
 
 It is designed to manage various drones within a single environment,
 enabling both **high-end professional drones and commercially available hobby camera drones**
 to be used for lifesaving and disaster response.
+
+---
+
+## Introduction
+- Click & Watch the Introduction Video
+[![MAIN-DRONE](https://img.youtube.com/vi/7IdtRp_fe1U/maxresdefault.jpg)](https://youtu.be/7IdtRp_fe1U)
 
 ---
 
@@ -109,8 +115,7 @@ By securing this critical **golden time**, the system enables faster decision-ma
 ## System Architecture
 
 ### Overall System Architecture
-<img height="900" alt="AWS Upload Presigned URL-2026-02-13-170224" src="https://github.com/user-attachments/assets/a2cb756b-b30d-49a5-a503-64afa2519ad0" />
-
+<img width="900" alt="AWS Upload Presigned URL-2026-02-13-170224" src="https://github.com/user-attachments/assets/dcf9a853-1261-4a26-866a-c3518ad586f2" />
 
 ---
 
@@ -129,5 +134,5 @@ By securing this critical **golden time**, the system enables faster decision-ma
 
 | Back-End <-> Front-End |
 |:---:|
-| <img height="700" alt="AWS Upload Presigned URL-2026-02-13-144904" src="https://github.com/user-attachments/assets/4e956658-5ef2-4c1d-972d-ea669aa09b67" /> |
+| <img width="700" alt="AWS Upload Presigned URL-2026-02-13-144904" src="https://github.com/user-attachments/assets/97c1dbf0-3e24-4b4d-8669-65f076a0ffe5" /> |
 | **Communication between Back-End Server and Front-End Dashboard** |
