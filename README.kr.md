@@ -2,129 +2,137 @@
 
 ---
 
-# 드론 데이터 전송 테스터
+# Drone Data Transmission Tester
 
 ---
-## 저장소 개요
-이 저장소는 서버의 API 동작을 확인하기 위해 드론 연결, 텔레메트리, 이벤트 데이터를 시뮬레이션하는 **드론 데이터 전송 테스터**를 제공합니다.
+## Repository Overview
+This repository provides a **Drone Data Transmission Tester**  
+that simulates drone connection, telemetry, and event data
+to verify the server’s API behavior.
 ---
 
-## 작동 방식
+## How It Works
 
-| 단계 | API 엔드포인트             | 설명 | 목적 | 비고      |
+| Step | API Endpoint             | Description | Purpose | etc.      |
 |------|--------------------------|-------------|---------|-----------|
-| 1 | `/auth/connect`          | 드론 시리얼 및 장치 이름을 전송합니다. 승인되면 인증 토큰을 받습니다. | 드론과 서버 간에 유효한 세션 설정 |
-| 2 | `/api/telemetry`| 토큰과 함께 일반 텔레메트리 데이터 (각도, 위치)를 전송합니다. | 주기적인 드론 상태 정보 전송 | (event=0) |
-| 3 | `/api/telemetry` | 이벤트 플래그와 이벤트 상세 정보 (예: 사람 감지)를 포함한 텔레메트리를 전송합니다. | 중요한 감지 이벤트 보고 | (event=1) |
-| 4 | `/auth/update`           | 현재 토큰을 전송하고 갱신된 토큰을 받습니다. | 유효한 인증된 세션 유지 |
-| 5 | `/auth/disconnect`       | 토큰과 함께 연결 해제 요청을 전송합니다. | 연결을 깔끔하게 종료 |
+| 1 | `/auth/connect`          | Sends drone serial and device name. Receives authentication token if approved. | Establish a valid session between drone and server |
+| 2 | `/api/telemetry`| Sends normal telemetry data (angle, position) with token. | Transmit periodic drone status information | (event=0) |
+| 3 | `/api/telemetry` | Sends telemetry with event flag and event details (e.g., human detected). | Report important detection events | (event=1) |
+| 4 | `/auth/update`           | Sends current token and receives a refreshed token. | Maintain a valid authenticated session |
+| 5 | `/auth/disconnect`       | Sends disconnect request with token. | Cleanly close the connection |
 
 ---
 
-## 설치
-필수 종속성을 설치합니다:
+## Installation
+Install the required dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 ---
-## 사용법
-애플리케이션을 실행합니다:
+## Usage
+Run the application:
 ```bash
 python3 tester.py
 ```
 ---
 
----
-
-# 프로젝트 개요
-# 제조사 독립형 드론 플랫폼
-
----
-이는 **제조사 독립형 드론 모니터링 플랫폼**입니다.
-
-단일 환경에서 다양한 드론을 관리하도록 설계되었으며, **고급 전문가용 드론과 시판되는 취미용 카메라 드론** 모두를 인명 구조 및 재난 대응에 활용할 수 있게 합니다.
 
 ---
 
-## 소개
-- 소개 영상 클릭 & 시청
+# PROJECT OVERVIEW
+# Manufacturer-Independent Drone Platform
+
+---
+It is a **Manufacturer-Independent Drone Monitoring Platform.**
+
+It is designed to manage various drones within a single environment,
+enabling both **high-end professional drones and commercially available hobby camera drones**
+to be used for lifesaving and disaster response.
+
+---
+
+## Introduction
+- Click & Watch the Introduction Video
 [![MAIN-DRONE](https://img.youtube.com/vi/7IdtRp_fe1U/maxresdefault.jpg)](https://youtu.be/7IdtRp_fe1U)
 
 ---
 
-## 프로젝트 구조
+## Project Structure
 
-이 플랫폼은 여러 독립적인 저장소로 구성됩니다:
+This platform consists of multiple independent repositories:
 
-| 구성 요소 | 설명                                         | 저장소                                                              |
-|---------|----------------------------------------------|-------------------------------------------------------------------------|
-| Server | 핵심 드론 플랫폼 서버 (API, 인증, 텔레메트리) | [GitHub](https://github.com/seyun4047/drone-platform-server)            |
-| Monitoring Server | 실시간 드론 상태 점검 모니터링 서비스        | [GitHub](https://github.com/seyun4047/drone-platform-monitoring-server) |
-| Drone Data Tester | 드론 텔레메트리 및 데이터 시뮬레이션 테스트 클라이언트 | [GitHub](https://github.com/seyun4047/drone-platform-trans-tester)       |
-| Drone Client | 드론 데이터 수집, 전송 및 분석               | [GitHub](https://github.com/seyun4047/drone-platform-client)            |
-| Dashboard | 드론 플랫폼 프론트엔드                       | [GitHub](https://github.com/seyun4047/drone-platform-dashboard)            |
-| Docs | 플랫폼 문서, API                             | [GitHub](https://github.com/seyun4047/drone-platform-docs)|
-
----
-
-## 배경
-
-맞춤형 드론, 상용 드론 및 소비자용 드론은 유사한 기본 제어 메커니즘을 공유하지만, 실제 환경에서의 작동 방식과 **명령 및 제어 구조**는 상당히 다릅니다.
-
-실제로 드론은 다음과 같은 요소에 크게 의존하는 도구로 활용되는 경우가 많습니다:
-- 특정 장비
-- 고도로 훈련된 인력
-
-최근 많은 기관과 기업이 AI 기술과 통합된 드론 시스템을 구축하려는 시도를 했습니다. 그러나 이러한 시스템에는 명확한 한계가 있습니다. 이들은 일반적으로 특정 드론 모델을 튜닝하거나 단일 유형의 맞춤형 드론을 운용하는 데 의존하며, 이는 전문 인력과 독점 기술에 대한 강한 의존성을 초래합니다.
-
-이러한 의존성은 특히 **인명 구조 및 재난 대응 작전**에서 매우 중요합니다.
-
----
-## 프로젝트 목표
-- 인명 구조 및 재난 대응 작업을 지원하는 제조사 독립형 드론 모니터링 플랫폼.
-
----
-## 목표
-
-- 드론 모델이나 제조사에 관계없이 배포 가능한 드론 모니터링 및 관리 시스템
-- 복잡한 제어 절차 없이 현장에 즉시 배포할 수 있는 시스템
-- 특정 드론 하드웨어의 성능에 의존하지 않는 시스템
-- 비전문가 드론 애호가도 비상 상황에서 효과적으로 기여할 수 있는 시스템
+| Component | Description                                       | Repository                                                              |
+|---------|---------------------------------------------------|-------------------------------------------------------------------------|
+| Server | Core drone platform server (API, Auth, Telemetry) | [GitHub](https://github.com/seyun4047/drone-platform-server)            |
+| Monitoring Server | Real-time Drone health check monitoring service   | [GitHub](https://github.com/seyun4047/drone-platform-monitoring-server) |
+| Drone Data Tester | Test client for drone telemetry & data simulation | [GitHub](https://github.com/seyun4047/drone-platform-trans-tester)       |
+| Drone Client | Drone Data Collection, Transmission & Analysis | [GitHub](https://github.com/seyun4047/drone-platform-client)            |
+| Dashboard | Drone platform's front-end | [GitHub](https://github.com/seyun4047/drone-platform-dashboard)            |
+| Docs | Platform Documents, API's | [GitHub](https://github.com/seyun4047/drone-platform-docs)|
 
 ---
 
-## 기대 효과
+## Background
 
-인명 구조 및 재난 대응 시나리오에서, 전문 장비나 구조팀이 현장에 도착하기 전에, 누구나 조작할 수 있는 모든 사용 가능한 드론은 즉시 다음과 같이 배포될 수 있습니다:
-- 피해자 평가
-- 위험 요소 식별
-- 피해 규모 추정
+Although custom drones, commercial drones, and consumer drones share similar basic control mechanisms,
+their operational methods and **command-and-control structures** in real-world environments vary significantly.
 
-이 중요한 **골든 타임**을 확보함으로써, 이 시스템은 더 빠른 의사 결정과 고급 구조 자원의 보다 효과적인 배치를 가능하게 하며, 궁극적으로 더 정교하고 영향력 있는 드론 지원 비상 대응 시스템으로 이어집니다.
+In practice, drones are often utilized as tools that depend heavily on:
+- Specific equipment
+- Highly trained personnel
+
+Recently, many institutions and companies have attempted to build drone systems integrated with AI technologies.  
+However, these systems have clear limitations. They typically rely on tuning specific drone models or operating a single type of custom-built drone, which results in strong dependency on specialized personnel and proprietary technologies.
+
+Such dependency is particularly critical in **life-saving and disaster response operations**.
+
+---
+## Project Goal
+- A manufacturer-independent drone monitoring platform that supports lifesaving and disaster response operations.
+
+---
+## Objectives
+
+- A drone monitoring and management system deployable regardless of drone model or manufacturer
+- A system that can be immediately deployed in the field without complex control procedures
+- A system that does not rely on the performance capabilities of specific drone hardware
+- A system that allows non-professional drone hobbyists to contribute effectively in emergency situations
 
 ---
 
-## 시스템 아키텍처
+## Expected Impact
 
-### 전체 시스템 아키텍처
-<img width="900" alt="AWS Upload Presigned URL-2026-02-13-170224" src="https://github.com/user-attachments/assets/dcf9a853-1261-4a26-866a-c3518ad586f2" />
+In life-saving and disaster response scenarios, before professional equipment or rescue teams arrive on site,  
+any available drone—if operable by anyone—can be immediately deployed to:
+- Assess victims
+- Identify hazards
+- Estimate damage
+
+By securing this critical **golden time**, the system enables faster decision-making and more effective deployment of advanced rescue resources, ultimately leading to more sophisticated and impactful drone-assisted emergency response systems.
 
 ---
 
-## 핵심 시스템 흐름
+## System Architecture
 
-|                                                                           인증 로직                                                                            |                                          드론으로부터의 제어 데이터                                          |
+### Overall System Architecture
+<img width="900" alt="AWS Upload Presigned URL-2026-02-18-150556" src="https://github.com/user-attachments/assets/0d62033e-cc5c-4809-a666-0eb3c626c08f"/>
+
+---
+
+## Core System Flows
+
+|                                                                           Auth Logic                                                                            |                                          Control Data From Drone                                          |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------:|
 |  <img width="450" alt="Redis Token Connection Flow-2026-02-01-182619" src="https://github.com/user-attachments/assets/cf0e6a9e-eeae-4525-aaf1-198c98e61c90" />  | <img width="450" alt="Redis Token Connection Flow-2026-02-01-182708" src="https://github.com/user-attachments/assets/a344e0c5-b12a-45ab-951c-0cefcc87bf2b" />
  |
-|                                                   **Redis 기반 인증 및 연결 제어 흐름.**                                                   |                    **인증 후 제어 및 텔레메트리 데이터 처리.**                     |
+|                                                   **Redis-based authentication and connection control flow.**                                                   |                    **Processing of control and telemetry data after authentication.**                     |
 
-|                                             토큰 유효성 검사                                              |                                             모니터링 서버                                             |
+|                                             Token Validation                                              |                                             Monitoring Server                                             |
 |:---------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------:|
 | <img src="https://github.com/user-attachments/assets/456dc993-64a0-4ac8-9138-0f5446aaad07" width="450"/>  |<img width="450" alt="Untitled diagram-2026-02-11-173920" src="https://github.com/user-attachments/assets/6eea1ba2-663d-4bf1-be1d-c729e3bda2f7" />|
-|                          **수신되는 드론 데이터에 대한 Redis 토큰 유효성 검사.**                          |                              **주기적인 드론 연결 상태 모니터링.**                             |
+|                          **Validation of Redis tokens for incoming drone data.**                          |                              **Periodic drone connection state monitoring.**                             |
 
-| 백엔드 <-> 프론트엔드 |
+| Back-End <-> Front-End |
 |:---:|
 | <img width="700" alt="AWS Upload Presigned URL-2026-02-13-144904" src="https://github.com/user-attachments/assets/97c1dbf0-3e24-4b4d-8669-65f076a0ffe5" /> |
-| **백엔드 서버와 프론트엔드 대시보드 간 통신** |
+| **Communication between Back-End Server and Front-End Dashboard** |
