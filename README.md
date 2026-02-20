@@ -39,21 +39,25 @@ python3 tester.py
 
 ---
 
+<div align="center">
+ 
 # PROJECT OVERVIEW
-# Manufacturer-Independent Drone Platform
+
+  <a href="https://youtu.be/7IdtRp_fe1U" target="_blank">
+    <img width="900" src="https://github.com/user-attachments/assets/7bc575a8-27f7-4e64-b04e-1e33d4a7848e" alt="MAIN_DRONE_LOGO"/>
+  </a>
+   <p><strong>Click & Watch the Introduction Video</strong></p> 
 
 ---
+
+
 It is a **Manufacturer-Independent Drone Monitoring Platform.**
 
-It is designed to manage various drones within a single environment,
-enabling both **high-end professional drones and commercially available hobby camera drones**
+It is designed to manage various drones within a single environment, enabling both **high-end professional drones
+<br>and commercially available hobby camera drones**
 to be used for lifesaving and disaster response.
 
----
 
-## Introduction
-- Click & Watch the Introduction Video
-[![MAIN-DRONE](https://img.youtube.com/vi/7IdtRp_fe1U/maxresdefault.jpg)](https://youtu.be/7IdtRp_fe1U)
 
 ---
 
@@ -70,28 +74,47 @@ This platform consists of multiple independent repositories:
 | Dashboard | Drone platform's front-end | [GitHub](https://github.com/seyun4047/drone-platform-dashboard)            |
 | Docs | Platform Documents, API's | [GitHub](https://github.com/seyun4047/drone-platform-docs)|
 
+
+
 ---
+
+
 
 ## Background
 
+</div>
+
 Although custom drones, commercial drones, and consumer drones share similar basic control mechanisms,
-their operational methods and **command-and-control structures** in real-world environments vary significantly.
+<br>their operational methods and **command-and-control structures** in real-world environments vary significantly.
 
 In practice, drones are often utilized as tools that depend heavily on:
 - Specific equipment
 - Highly trained personnel
 
 Recently, many institutions and companies have attempted to build drone systems integrated with AI technologies.  
-However, these systems have clear limitations. They typically rely on tuning specific drone models or operating a single type of custom-built drone, which results in strong dependency on specialized personnel and proprietary technologies.
+However, these systems have clear limitations.
+<br>They typically rely on tuning specific drone models or operating a single type of custom-built drone,
+<br>which results in strong dependency on specialized personnel and proprietary technologies.
 
 Such dependency is particularly critical in **life-saving and disaster response operations**.
 
 ---
-## Project Goal
+
+<div align="center">
+
+ ## Project Goal
+
+</div>
+
 - A manufacturer-independent drone monitoring platform that supports lifesaving and disaster response operations.
 
 ---
+
+<div align="center">
+ 
 ## Objectives
+
+</div>
 
 - A drone monitoring and management system deployable regardless of drone model or manufacturer
 - A system that can be immediately deployed in the field without complex control procedures
@@ -100,26 +123,36 @@ Such dependency is particularly critical in **life-saving and disaster response 
 
 ---
 
-## Expected Impact
+<div align="center">
 
-In life-saving and disaster response scenarios, before professional equipment or rescue teams arrive on site,  
-any available drone—if operable by anyone—can be immediately deployed to:
+ ## Expected Impact
+
+</div>
+
+In life-saving and disaster response scenarios, before professional equipment<br>
+or rescue teams arrive on site, any available drone—if operable by anyone—can be immediately deployed to:
 - Assess victims
 - Identify hazards
 - Estimate damage
 
-By securing this critical **golden time**, the system enables faster decision-making and more effective deployment of advanced rescue resources, ultimately leading to more sophisticated and impactful drone-assisted emergency response systems.
+By securing this critical **golden time**, the system enables faster decision-making<br>
+and more effective deployment of advanced rescue resources, ultimately leading to more sophisticated<br>
+and impactful drone-assisted emergency response systems.
 
 ---
-
+<div align="center">
+ 
 ## System Architecture
 
 ### Overall System Architecture
-<img width="900" alt="AWS Upload Presigned URL-2026-02-18-150556" src="https://github.com/user-attachments/assets/0d62033e-cc5c-4809-a666-0eb3c626c08f"/>
+
+<img width="8192" height="6302" alt="AWS Upload Presigned URL-2026-02-20-144917" src="https://github.com/user-attachments/assets/687f81a5-f03c-4f28-acc3-338f4d78a00a" />
 
 ---
 
 ## Core System Flows
+<details>
+  <summary>Click to expand</summary>
 
 |                                                                           Auth Logic                                                                            |                                          Control Data From Drone                                          |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------:|
@@ -136,3 +169,7 @@ By securing this critical **golden time**, the system enables faster decision-ma
 |:---:|
 | <img width="700" alt="AWS Upload Presigned URL-2026-02-13-144904" src="https://github.com/user-attachments/assets/97c1dbf0-3e24-4b4d-8669-65f076a0ffe5" /> |
 | **Communication between Back-End Server and Front-End Dashboard** |
+
+</details>
+
+</div>
